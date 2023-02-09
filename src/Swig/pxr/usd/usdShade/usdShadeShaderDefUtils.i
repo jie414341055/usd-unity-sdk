@@ -17,4 +17,7 @@
 #include "pxr/usd/usdShade/shaderDefUtils.h"
 %}
 
+// minjiezhang: Swig doesn't handle unique_ptr well, will cause Compile Error
+%ignore UsdShadeShaderDefUtils::GetShaderProperties;
+
 %include "pxr/usd/usdShade/shaderDefUtils.h"

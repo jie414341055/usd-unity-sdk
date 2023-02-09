@@ -79,7 +79,7 @@ elseif (${CMAKE_SYSTEM_NAME} STREQUAL "Windows")
         CXX_STANDARD_REQUIRED 14
         # USE_TARGET_INCLUDE_DIRECTORIES TRUE
         )
-     set(LINK_DEPENDENCIES Alembic Iex-2_2 IexMath-2_2 Imath-2_2 IlmThread-2_2 IlmImf-2_2 Half)
+     set(LINK_DEPENDENCIES Alembic Iex-2_3 IexMath-2_3 Imath-2_3 IlmThread-2_3 IlmImf-2_3 Half-2_3)
 endif ()
 
 
@@ -125,6 +125,12 @@ install(SCRIPT ${CMAKE_SOURCE_DIR}/cmake/install_usd_bindings.cmake)
 set(PIXAR_DEPS usd_ms ${LINK_DEPENDENCIES})
 list(TRANSFORM PIXAR_DEPS PREPEND ${USD_LIBRARY_DIR}/${CMAKE_SHARED_LIBRARY_PREFIX})
 list(TRANSFORM PIXAR_DEPS APPEND ${CMAKE_SHARED_LIBRARY_SUFFIX})
+list(TRANSFORM PIXAR_DEPS REPLACE "lib/Iex-2_3" "bin/Iex-2_3")
+list(TRANSFORM PIXAR_DEPS REPLACE "lib/IexMath-2_3" "bin/IexMath-2_3")
+list(TRANSFORM PIXAR_DEPS REPLACE "lib/Imath-2_3" "bin/Imath-2_3")
+list(TRANSFORM PIXAR_DEPS REPLACE "lib/IlmThread-2_3" "bin/IlmThread-2_3")
+list(TRANSFORM PIXAR_DEPS REPLACE "lib/IlmImf-2_3" "build/openexr-2.3.0/OpenEXR/IlmImf/Release/IlmImf-2_3")
+list(TRANSFORM PIXAR_DEPS REPLACE "lib/Half-2_3" "bin/Half-2_3")
 if (${CMAKE_SYSTEM_NAME} STREQUAL "Windows")
     list(APPEND PIXAR_DEPS ${USD_BIN_DIR}/${CMAKE_SHARED_LIBRARY_PREFIX}tbb${CMAKE_SHARED_LIBRARY_SUFFIX})
 endif()

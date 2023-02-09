@@ -48,6 +48,7 @@
   public static TfToken edgeOnly = new TfToken("edgeOnly");
   public static TfToken elementSize = new TfToken("elementSize");
   public static TfToken elementType = new TfToken("elementType");
+  public static TfToken exposure = new TfToken("exposure");
   public static TfToken extent = new TfToken("extent");
   public static TfToken extentsHint = new TfToken("extentsHint");
   public static TfToken fStop = new TfToken("fStop");

@@ -70,6 +70,7 @@ namespace std {
 typedef std::vector< vector<double> > StdDoubleVectorVector;
 
 #define PXR_USE_NAMESPACES 0
+#define AR_VERSION 1
 #include "pxr/pxr.h"
 
 #define PXR_NAMESPACE_OPEN_SCOPE 

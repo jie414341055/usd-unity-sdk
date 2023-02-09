@@ -15,8 +15,9 @@ project(usd-unity-sdk)
 set(BUILD_USD_NET FALSE CACHE BOOL "Build USD.NET.dll and USD.NET.Unity.dll")
 set(BUILD_USDCS TRUE CACHE BOOL "Build USD C# bindings")
 set(BUILD_TESTS FALSE CACHE BOOL "Build USD.NET tests")
-set(PYTHON_VERSION "3.6" CACHE STRING "Python version to use")
+set(PYTHON_VERSION "3.7" CACHE STRING "Python version to use")
 set(USE_CUSTOM_MONO FALSE CACHE BOOL "Use a standalon version of mono. If false, use the Mono version provided by Unity.")
+
 
 message("${PXR_USD_LOCATION_PYTHON_BUILD}")
 if (NOT PXR_USD_LOCATION_PYTHON_BUILD)
