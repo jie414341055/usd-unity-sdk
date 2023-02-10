@@ -34,7 +34,7 @@
 //
 // Add a special mapping for UsdShadeAttributeType
 //
-OUTPUT_TYPEMAP(UsdShadeAttributeType, UsdShadeAttributeType, UsdShadeAttributeType, INT32_PTR)
+// OUTPUT_TYPEMAP(UsdShadeAttributeType, UsdShadeAttributeType, UsdShadeAttributeType, INT32_PTR)
 
 #undef OUTPUT_TYPEMAP
 // ---------------------------------------------------------------------------------------------- //
@@ -51,3 +51,4 @@ OUTPUT_TYPEMAP(UsdShadeAttributeType, UsdShadeAttributeType, UsdShadeAttributeTy
 %include "usdShadeConnectableAPI.i"
 
 %include "usdShadeTokens.i"
+%include "usdShadeTypes.i"
